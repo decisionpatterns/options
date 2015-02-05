@@ -2,11 +2,11 @@
 
 ## Overview 
 
-   setOption( foo = list( bar = "baz" ) )
+    setOption( foo = list( bar = "baz" ) )
    
-   getOption( foo$bar )
-   getOption( foo[['bar']]
-   getOption( foo[[1]] )
+    getOption( foo$bar )
+    getOption( foo[['bar']]
+    getOption( foo[[1]] )
 
 
 ## Installation 
@@ -50,7 +50,3 @@ The complement to deep introspection and retrieval is deep assignment.  Under ba
 
      setOptions( foo$bar = 'baz' )
   
-
-
-
-
