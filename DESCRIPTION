@@ -1,0 +1,15 @@
+Package: option.tools
+Title: Utilities and improvements for working with R's global options mechanisms
+Version: 0.1
+Date: 2015-02-05
+Authors@R: person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", role = c("aut", "cre"))
+Description: Provides intuitive interface and seamless, dropin replacements for
+    R's global option mechanism that allows for easy inspection, retrieval and
+    setting of options, e.g. getOptions( foo$bar[['baz']] ) does the right
+    thing.
+url: URL: https://github.com/decisionpatterns/option.tools
+BugReports: https://github.com/decisionpatterns/option.tools/issues
+Depends: R (>= 3.1.0)
+License: GPL-2
+LazyData: true
+Suggests: testthat
