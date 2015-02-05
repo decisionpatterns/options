@@ -38,8 +38,8 @@ The preferred way of retrieving an option is using `getOption` from the `base` p
 
 This has three advantages. First the syntax is clearer as to the intent. Second, the `default` argument is compared to the option at the correct level. This simplifies using options for functions.  For example:
 
-   f <- function( x = getOption(foo$bar,20) ) ...   # INSTEAD OF:
-   f <- function( x = if( is.null( getOption('foo')$bar ) ) getOption('foo')$bar else 20 
+    f <- function( x = getOption(foo$bar,20) ) ...   # INSTEAD OF:
+    f <- function( x = if( is.null( getOption('foo')$bar ) ) getOption('foo')$bar else 20 
 
 The third advantage is that it encourages package developers to place all of the options related to a package in a single list
 
