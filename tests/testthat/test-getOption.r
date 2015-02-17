@@ -22,3 +22,5 @@ context('getOption')
    expect_identical( getOption(foo$bar), li$bar )
    expect_identical( getOption(foo[['bar']]), li$bar )
    expect_identical( getOption(foo[[1]]), li$bar )
+
+   expect_identical( getOption(xdx$ydy, default="default"), "default" )  # does not exist, e.g.

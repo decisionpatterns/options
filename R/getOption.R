@@ -35,6 +35,8 @@
 #'    options( lets = letters )
 #'    getOption( lets[1:5] )
 #'
+#'    getOption(xdx$ydy, default="default")  # does not exist, e.g.
+#'
 #' @export
 
 getOption <- function(x, default = NULL) {
@@ -42,9 +44,9 @@ getOption <- function(x, default = NULL) {
   x_ <- substitute(x)
   if( class(x_) == 'character' ) return( base::getOption( x_, default ) )
 
-  ret <- eval(x_, .Options)
+  try( ret <- eval(x_, .Options), silent=TRUE )
 
-  if( is.null(ret) ) return(default)
+  if( ! exists('ret') || is.null(ret) ) return(default)
   return(ret)
 
 }
