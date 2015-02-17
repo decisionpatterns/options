@@ -1,7 +1,7 @@
 Package: options
 Title: Utilities and improvements for working with R's global options mechanisms
-Version: 0.1
-Date: 2015-02-05
+Version: 0.2
+Date: 2015-02-17
 Authors@R: person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", role = c("aut", "cre"))
 Description: Provides intuitive interface and seamless, dropin replacements for
     R's global option mechanism that allows for easy inspection, retrieval and
