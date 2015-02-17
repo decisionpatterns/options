@@ -1,4 +1,4 @@
-# option.tools
+# options
 
 ## Overview 
 
@@ -11,7 +11,7 @@
 
 ## Installation 
 
-    # SOON: install.packages("option.tools")
+    # SOON: install.packages("options")
     devtools::install_github("decisionpatterns/options.tools")
     
   
@@ -24,14 +24,14 @@ R's internal global option mechanism is fairly important.  It is used to define 
 
 ## setOption
 
-There is a function `getOption`, why not the complement `setOption`?  `option.tools` provides one.
+There is a function `getOption`, why not the complement `setOption`?  `options` provides one.
 
 
 ## Deep Introspection and Retrieval of Global Options
 
 The preferred way of retrieving an option is using `getOption` from the `base` package. The limitiation with the base function is that options are retrieved by name (provided by a character string). This encourages bad practices for any complex options.  
 
-`option.tools` provides a drop-in replacement of `getOption` that accepts an expression as an argument that is subsequently evaluated on the Global Option environment. This allows for:
+`options` provides a drop-in replacement of `getOption` that accepts an expression as an argument that is subsequently evaluated on the Global Option environment. This allows for:
 
     getOption(foo$bar)    # INSTEAD OF:
     getOption(foo)$bar    
@@ -46,7 +46,7 @@ The third advantage is that it encourages package developers to place all of the
 
 ## Deep Assignment of Global Options
 
-The complement to deep introspection and retrieval is deep assignment.  Under base R, the entire options has to be assigned. `option.tools` allows for deep assignment
+The complement to deep introspection and retrieval is deep assignment.  Under base R, the entire options has to be assigned. `options` allows for deep assignment
 
      setOptions( foo$bar = 'baz' )
   

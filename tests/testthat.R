@@ -1,4 +1,4 @@
 library(testthat)
-library(option.tools)
+library(options)
 
-test_check("option.tools")
+test_check("options")
