@@ -1,7 +1,7 @@
 .onAttach <- function( libname, pkgname ) {
 
   if( interactive() )
-    packageStartupMessage( 
+    packageStartupMessage(
       pkgname ,
       "-" ,
       utils::packageVersion(pkgname, libname),
@@ -11,4 +11,3 @@
     )
 
 }
-
