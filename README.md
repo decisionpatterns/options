@@ -25,7 +25,7 @@ for deep setting of options.
 ## Installation 
 
     # SOON: install.packages("options")
-    devtools::install_github("decisionpatterns/options.tools")
+    devtools::install_github("decisionpatterns/options")
    
 
 ## Improvements to R's global options mechanism
