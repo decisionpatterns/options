@@ -9,7 +9,7 @@ the global option environment. This allows for deep retrieval of an option
 allowing for a more natural syntax. Similarly, the `set_option` function allows 
 for deep setting of options.
 
-## Overview 
+### Overview 
 
     set_option( foo = list( bar = "baz" ) )
    
@@ -22,25 +22,25 @@ for deep setting of options.
     get_option( foobar, "UNDEFINED" ) # "UNDEFINED"
     
 
-## Installation 
+### Installation 
 
     # SOON: install.packages("options")
     devtools::install_github("decisionpatterns/options.tools")
    
 
-## Improvements to R's global options mechanism
+### Improvements to R's global options mechanism
 
 R's internal global option mechanism is fairly important.  It is used to define singletons, set options for function, allow for load-time options for packages, etc.  Despite it's numerous uses, R's internal global option mechanism lacks some feature. As of this writing, there are only three functions: `options`, `get_option` and `.Options`.  The aim of this package is to fill in some of the missing functionality. Below is describe the functionality provide by this package.
 
 
-## set_option
+### set_option
 
 There is a function `get_option`, why not the complement `set_option`?  The `options` packages provides one.
 
     set_option( foo = list( bar = "baz" ) )
 
 
-## Deep Introspection and Retrieval of Global Options
+### Deep Introspection and Retrieval of Global Options
 
 The standard way of retrieving an option is using `getOption` from the `base` package. The limitiation with the base function is that options are retrieved by name (provided by a character string). This encourages bad practices.  
 
@@ -60,16 +60,18 @@ This has three advantages.
 
 3. It encourages package developers to place all of the options related to a package in a element rather than polluting the options pairlist. 
 
-    set_option( mypackage = list( width=10, length=Inf ) ) 
-    get_option( mypackage$width )
-    
-    # INSTEAD OF 
-    options( mypackage.width = 10, mypackage.length = Inf )
-  
+```
+set_option( mypackage = list( width=10, length=Inf ) ) 
+get_option( mypackage$width )
+
+# INSTEAD OF 
+options( mypackage.width = 10, mypackage.length = Inf )
+```
+
 
 ## NOT YET IMPLEMENTED 
 
-# Deep Assignment of Global Options
+### Deep Assignment of Global Options
 
 The complement to deep introspection and retrieval is deep assignment.Under 
 base R, the entire options has to be assigned. The `options` packages allows 
