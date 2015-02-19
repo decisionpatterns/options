@@ -49,6 +49,7 @@ The `options` package provides a lazy, drop-in replacement of `get_option` that 
     get_option(foo$bar)    # INSTEAD OF:
     get_option(foo)$bar    
 
+
 This has three advantages. 
 
 1. Syntax is clear as to the intent. 
@@ -75,3 +76,9 @@ base R, the entire options has to be assigned. The `options` packages allows
 for deep assignment
 
      set_options( foo$bar = 'baz' )
+
+## OVER-ZEALOUS CHECKING
+
+The package checking mechanism will complain about any unquoted arguments to *_option though these are syntactically valid.  The error given is that there is an undefined variable with the name of the options. The solution is to define this variable as `NULL`.
+
+
