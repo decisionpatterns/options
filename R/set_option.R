@@ -38,7 +38,7 @@ set_option <- function(...) {
   base::options(...)
 }
 
-# set_options <- function(...) {
+# set_options2 <- function(...) {
 #
 #   x_ = substitute(alist(...))
 #
@@ -51,13 +51,43 @@ set_option <- function(...) {
 #
 # }
 #
-# for( el in 2:length(x) ) {
-#   if( x[[el]][[1]] == ':=' ) {
 #
+#
+# for( el in 2:length(x) ) {
+#
+#   arg <- x[[el]]
+#   # HANDLE DEEP SETTING
+#   op  <- arg[[1]]
+#   lhs <- arg[[2]]
+#   rhs <- arg[[3]]
+#
+#   if( op == ':=' ) {
+#
+#     if( length(lhs) == 1 ) {
+#
+#     if( length(lhs) == 3 && lhs[[1]] %in% c( '$', '[[') ) {
+#
+#       opt.nm <- as.character( lhs[[2]] )
+#       opt <- get_option_( opt.nm, list() )
+#
+#       elem.nm <- as.character( lhs[[3]] )
+#
+#       opt[[elem.nm]] <- eval(rhs)
+#
+#
+#
+#     }
+#
+#       opt <- get_option(opt)
 #     opt <- x[[el]][[2]][[2]]  # name for the option
 #
 #   }
 #
 # }
+# #
 #
-# set_options( foo = 2, NULL, foo$bar := 10 )
+# x <- set_options2( foo$bar := 2 )
+#
+# # set_options2( foo = 2, NULL, foo$bar := 10 )
+#
+# # Can
