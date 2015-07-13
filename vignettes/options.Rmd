@@ -1,0 +1,33 @@
+---
+title: "options"
+author: "Christopher Brown"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The `options` packages provides improvements to R's global options functions. The out-of-the-box operations for manipulating options are fairly limited. For example, to retrieve a deeply-nested value using `getOption`, this is the idiom:
+
+    getOptions('foo')$bar[['baz']] 
+    
+It is pretty ugly and not clear what it happenning. By comparison, `options` allows a cleaner syntax:
+
+    get_option( foo$bar[['baz']] )
+    
+`get_options` does     
+
+`options` provides intuitive interface and seamless, lazy replacements for R's global option / singleton mechanism that encourages a cleaner (lazy) syntax and allows for deep retrieval and setting of options:
+
+
+
+## Functions
+
+### get_options
+
+
+### set_options
+
+`set_options` is currently only a lazy evaluaion of options.  

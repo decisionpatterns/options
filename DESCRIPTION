@@ -3,6 +3,7 @@ Title: Improvements for R's global options/singleton functions.
 Version: 0.3
 Date: 2015-02-17
 Authors@R: person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", role = c("aut", "cre"))
+Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
 Description: Provides intuitive interface and seamless, lazy replacements for
     R's global option / singleton mechanism that encourages a cleaner (lazy)
     syntax and allows for deep retrieval and setting of options:
@@ -12,4 +13,8 @@ BugReports: https://github.com/decisionpatterns/options/issues
 Depends: R (>= 3.1.0)
 License: GPL-2
 LazyData: true
-Suggests: testthat
+Suggests:
+    testthat,
+    knitr,
+    magrittr (>= 1.5)
+VignetteBuilder: knitr
