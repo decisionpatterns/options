@@ -1,5 +1,5 @@
 #' test-getOption.r
-#'
+
 library(testthat)
 
 context('get_option')

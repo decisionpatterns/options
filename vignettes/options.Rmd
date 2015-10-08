@@ -9,6 +9,8 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+*FOR A BETTER WAY OF HANDLING PACKAGE OPTIONS, SEE THE `workspaces` PACKAGE*
+
 The `options` packages provides improvements to R's global options functions. The out-of-the-box operations for manipulating options are fairly limited. For example, to retrieve a deeply-nested value using `getOption`, this is the idiom:
 
     getOptions('foo')$bar[['baz']] 
@@ -17,7 +19,7 @@ It is pretty ugly and not clear what it happenning. By comparison, `options` all
 
     get_option( foo$bar[['baz']] )
     
-`get_options` does     
+`get_options` does  what you expect.   
 
 `options` provides intuitive interface and seamless, lazy replacements for R's global option / singleton mechanism that encourages a cleaner (lazy) syntax and allows for deep retrieval and setting of options:
 
